@@ -22,7 +22,7 @@ class Customer
       end
       #show figures for this rental
       result += "\t" + element.movie.title + "\t" + element.charge.to_s + "\n"
-      total_amount = element.charge  
+      total_amount += element.charge  
     end
     #add footer lines
     result += "Amount owed is #{total_amount}\n"

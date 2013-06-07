@@ -51,4 +51,10 @@ class CustomerTest < Test::Unit::TestCase
     @customer.add_rental(Rental.new(@the_impossible, 2))
     assert_match "You earned 2 frequent renter points", @customer.statement
   end
+
+  def test_total_amount
+    @customer.add_rental(Rental.new(@casablanca, 1))
+    @customer.add_rental(Rental.new(@the_impossible, 1))
+    assert_match "Amount owed is 5", @customer.statement
+  end
 end
