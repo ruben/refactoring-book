@@ -3,6 +3,10 @@ require 'test/unit'
 require File.expand_path('../../customer.rb', __FILE__)
 require File.expand_path('../../movie.rb', __FILE__)
 require File.expand_path('../../rental.rb', __FILE__)
+require File.expand_path('../../default_price.rb', __FILE__)
+require File.expand_path('../../regular_price.rb', __FILE__)
+require File.expand_path('../../new_release_price.rb', __FILE__)
+require File.expand_path('../../childrens_price.rb', __FILE__)
 
 class CustomerTest < Test::Unit::TestCase
   def setup
