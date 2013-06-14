@@ -11,9 +11,9 @@ require File.expand_path('../../childrens_price.rb', __FILE__)
 class CustomerTest < Test::Unit::TestCase
   def setup
     @customer = Customer.new("Tobi")
-    @casablanca = Movie.new("Casablanca", Movie::REGULAR)
-    @the_impossible = Movie.new("The Impossible", Movie::NEW_RELEASE)
-    @barbie =  Movie.new("Barbie", Movie::CHILDRENS)
+    @casablanca = Movie.new("Casablanca", RegularPrice.new)
+    @the_impossible = Movie.new("The Impossible", NewReleasePrice.new)
+    @barbie =  Movie.new("Barbie", ChildrensPrice.new)
   end
 
   def test_regular_movie_rented_two_days
